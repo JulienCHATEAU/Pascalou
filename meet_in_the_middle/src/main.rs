@@ -38,7 +38,7 @@ fn main() {
 
     let mut count = 0;
     for left_elem in left_sub_sum.keys() {
-        if left_elem < &x {
+        if left_elem <= &x {
             let right_elem = &x-left_elem;
             if right_sub_sum.contains_key(&(right_elem)) {
                 count += left_sub_sum.get(&left_elem).unwrap() * right_sub_sum.get(&right_elem).unwrap();
